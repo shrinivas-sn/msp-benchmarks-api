@@ -1,5 +1,7 @@
 "use strict";
 
+const fs = require("fs");
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
@@ -69,6 +71,24 @@ function createApp(options = {}) {
       }
     });
   };
+
+  const distDir = path.join(__dirname, "../../frontend/dist");
+  if (fs.existsSync(distDir)) {
+    app.use(express.static(distDir, { index: false }));
+
+    const servePage = (pageFile) => (req, res, next) => {
+      const accept = req.headers.accept || "";
+      if (accept.includes("text/html")) {
+        return res.sendFile(path.join(distDir, pageFile));
+      }
+      next();
+    };
+
+    app.get("/", servePage("index.html"));
+    app.get("/docs", servePage("docs/index.html"));
+    app.get("/playground", servePage("playground/index.html"));
+    app.get("/status", servePage("status/index.html"));
+  }
 
   app.get("/", handleHealth);
   app.get("/health", handleHealth);
