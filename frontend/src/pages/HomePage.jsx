@@ -68,16 +68,8 @@ export default function HomePage() {
 
   return (
     <div className="animate-enter">
-      {/* Editorial Hero */}
+      {/* Hero */}
       <section className="hero">
-        <div className="hero-kicker">
-          <span>Official Gazette Data</span>
-          <span className="kicker-sep">•</span>
-          <span>Ministry of Agriculture &amp; Farmers Welfare</span>
-          <span className="kicker-sep">•</span>
-          <span>Keyless Edge API</span>
-        </div>
-
         <h1>
           Indian Minimum Support Price (MSP) Benchmark API
         </h1>

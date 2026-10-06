@@ -143,17 +143,17 @@ export default function PlaygroundPage() {
   return (
     <div className="animate-enter">
       {/* Header */}
-      <div style={{ marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '2.25rem', fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
+      <div style={{ marginBottom: '1.25rem' }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--text-main)', marginBottom: '0.4rem' }}>
           Interactive API Playground
         </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem' }}>
           Test Indian Minimum Support Price queries live, simulate statutory cost margins, and generate code snippets in real-time.
         </p>
       </div>
 
       {/* Preset Queries */}
-      <div style={{ marginBottom: '1.5rem' }}>
+      <div style={{ marginBottom: '1rem' }}>
         <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', display: 'block', marginBottom: '0.5rem' }}>
           Quick Preset Queries:
         </span>

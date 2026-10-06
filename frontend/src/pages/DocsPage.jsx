@@ -220,11 +220,11 @@ export default function DocsPage() {
   return (
     <div className="animate-enter">
       {/* Title */}
-      <div style={{ marginBottom: '2.5rem' }}>
-        <h1 style={{ fontSize: '2.25rem', fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--text-main)', marginBottom: '0.5rem' }}>
+      <div style={{ marginBottom: '1.5rem' }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--text-main)', marginBottom: '0.4rem' }}>
           API Documentation & Reference
         </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '720px' }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', maxWidth: '720px' }}>
           Complete REST endpoint specifications, request parameters, rate limits, and JSON schemas for statutory Indian agricultural MSP data.
         </p>
       </div>
@@ -234,8 +234,8 @@ export default function DocsPage() {
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '1rem',
-          marginBottom: '2.5rem'
+          gap: '0.75rem',
+          marginBottom: '1.5rem'
         }}
       >
         <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '10px', padding: '1.25rem', boxShadow: 'var(--shadow-sm)' }}>

@@ -42,12 +42,12 @@ export default function StatusPage() {
   return (
     <div className="animate-enter">
       {/* Title */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.25rem' }}>
         <div>
-          <h1 style={{ fontSize: '2.25rem', fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--text-main)', marginBottom: '0.4rem' }}>
+          <h1 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.025em', color: 'var(--text-main)', marginBottom: '0.35rem' }}>
             System & Data Integrity Status
           </h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem' }}>
             Real-time operational health, upstream CACP source parity, and statutory dataset snapshot freshness.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function StatusPage() {
       </div>
 
       {/* 30-Day SLA Uptime Bar */}
-      <div className="table-container" style={{ padding: '1.5rem', marginBottom: '2.5rem' }}>
+      <div className="table-container" style={{ padding: '1.25rem', marginBottom: '1.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
           <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, color: 'var(--text-main)' }}>
             Service Uptime & SLA (Past 30 Days)
@@ -143,7 +143,7 @@ export default function StatusPage() {
       </div>
 
       {/* Endpoint Status Table */}
-      <div className="table-container" style={{ marginBottom: '2.5rem' }}>
+      <div className="table-container" style={{ marginBottom: '1.5rem' }}>
         <div className="table-header">
           <div>
             <h2>Endpoint Status & Cache TTL</h2>
@@ -218,7 +218,7 @@ export default function StatusPage() {
       </div>
 
       {/* Upstream Gazette Citations */}
-      <div className="table-container" style={{ padding: '1.75rem' }}>
+      <div className="table-container" style={{ padding: '1.25rem' }}>
         <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <IconShieldCheck size={18} />
           <span>Statutory Gazette References & Upstream Citations</span>

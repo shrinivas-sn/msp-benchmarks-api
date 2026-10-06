@@ -213,48 +213,31 @@ main {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  padding: 1.25rem 1.5rem 2rem 1.5rem;
 }
 
 .hero {
   text-align: center;
-  padding: 2.5rem 0 3rem 0;
+  padding: 0.75rem 0 1.5rem 0;
   max-width: 860px;
   margin: 0 auto;
 }
 
-/* Institutional kicker replacing floating AI pills */
-.hero-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-}
-
-.kicker-sep {
-  color: var(--border-strong);
-}
-
 .hero h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
   color: var(--text-main);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.65rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--text-muted);
   max-width: 680px;
-  margin: 0 auto 2.25rem auto;
+  margin: 0 auto 1.25rem auto;
 }
 
 /* Code Snippet Tabs & Box */
@@ -350,37 +333,37 @@ main {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 2.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1rem 1.25rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
 }
 
 .stat-card .label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-muted);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .stat-card .value {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .stat-card .desc {
@@ -399,15 +382,15 @@ main {
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
   overflow: hidden;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .table-header {
-  padding: 1.25rem 1.5rem;
+  padding: 0.85rem 1.25rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -498,7 +481,7 @@ main {
 
 .data-table th {
   background: var(--bg-card-subtle);
-  padding: 0.75rem 1.25rem;
+  padding: 0.55rem 1rem;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -508,7 +491,7 @@ main {
 }
 
 .data-table td {
-  padding: 0.9rem 1.25rem;
+  padding: 0.65rem 1rem;
   border-bottom: 1px solid var(--border-subtle);
   vertical-align: middle;
 }
@@ -802,7 +785,7 @@ main {
 .footer {
   border-top: 1px solid var(--border);
   background: var(--bg-canvas);
-  padding: 2.5rem 1.5rem 2rem;
+  padding: 1.5rem 1.5rem 1.25rem;
   margin-top: auto;
 }
 
