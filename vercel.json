@@ -1,8 +1,14 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "buildCommand": "npm --prefix frontend run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "backend/**",
+      "maxDuration": 15
+    }
+  },
   "rewrites": [
     {
       "source": "/health",
@@ -11,6 +17,26 @@
     {
       "source": "/v1/(.*)",
       "destination": "/api/index.js"
+    },
+    {
+      "source": "/docs",
+      "destination": "/docs/index.html"
+    },
+    {
+      "source": "/guides",
+      "destination": "/guides/index.html"
+    },
+    {
+      "source": "/guides/:id",
+      "destination": "/guides/:id/index.html"
+    },
+    {
+      "source": "/playground",
+      "destination": "/playground/index.html"
+    },
+    {
+      "source": "/status",
+      "destination": "/status/index.html"
     }
   ],
   "headers": [
