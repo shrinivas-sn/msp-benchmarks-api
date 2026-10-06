@@ -45,7 +45,7 @@
     "targets": [
       {
         "repo": "public-apis/public-apis",
-        "pr": "https://github.com/public-apis/public-apis/pull/7786"
+        "pr": 7786
       }
     ]
   }
