@@ -18,6 +18,7 @@ const vite = await createServer({ root: projectDir, server: { middlewareMode: tr
 
 try {
   const { AppContent } = await vite.ssrLoadModule('/src/App.jsx');
+  const { MSP_GUIDES } = await vite.ssrLoadModule('/src/content/guidesData.js');
 
   const mainPages = [
     {
@@ -39,6 +40,12 @@ try {
       description: 'Test Indian Minimum Support Price queries live in browser across crops, years, and CACP cost of production benchmarks.'
     },
     {
+      route: '/guides',
+      file: path.join(distDir, 'guides', 'index.html'),
+      title: 'Technical Guides & Analysis — India MSP API',
+      description: 'Authoritative guides on Indian Minimum Support Price calculations, Swaminathan cost benchmarks, and developer integration patterns.'
+    },
+    {
       route: '/status',
       file: path.join(distDir, 'status', 'index.html'),
       title: 'Service Status & Uptime — India MSP API',
@@ -46,15 +53,53 @@ try {
     }
   ];
 
-  for (const page of mainPages) {
+  const guideSeoTitles = {
+    'how-indian-msp-is-calculated': 'How Indian MSP is Calculated (A2+FL vs C2) — India MSP',
+    'historical-msp-trends-analysis-2010-2026': '17-Year Historical MSP Trends (2010–2026) — India MSP',
+    'integrating-msp-benchmarks-api': 'Integrating Indian MSP API in Python & Node.js — India MSP'
+  };
+
+  const guidePages = MSP_GUIDES.map((g) => {
+    const seoTitle = guideSeoTitles[g.id] || `${g.title.slice(0, 45)} — India MSP`;
+    return {
+      route: `/guides/${g.id}`,
+      file: path.join(distDir, 'guides', g.id, 'index.html'),
+      title: seoTitle,
+      description: g.summary,
+      article: {
+        '@context': 'https://schema.org',
+        '@type': 'TechArticle',
+        'headline': g.title,
+        'description': g.summary,
+        'datePublished': '2026-10-06T00:00:00.000Z',
+        'author': {
+          '@type': 'Organization',
+          'name': 'India MSP Benchmark API'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'India MSP Benchmark API'
+        }
+      }
+    };
+  });
+
+  const allPages = [...mainPages, ...guidePages];
+
+  for (const page of allPages) {
     const body = renderToString(React.createElement(MemoryRouter, { initialEntries: [page.route] }, React.createElement(AppContent)));
     const canonical = new URL(page.route, siteUrl).href;
-    const html = template
+    let html = template
       .replace('<div id="root"></div>', `<div id="root">${body}</div>`)
       .replace(/<title>[^<]*<\/title>/, `<title>${escapeXml(page.title)}</title>`)
       .replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeXml(page.description)}" />`)
       .replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${escapeXml(canonical)}" />`)
       .replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${escapeXml(canonical)}" />`);
+
+    if (page.article) {
+      const ldJson = `<script type="application/ld+json">${JSON.stringify(page.article)}</script>`;
+      html = html.replace('</head>', `  ${ldJson}\n  </head>`);
+    }
 
     await fs.mkdir(path.dirname(page.file), { recursive: true });
     await fs.writeFile(page.file, html);
@@ -73,9 +118,9 @@ try {
   await fs.writeFile(path.join(distDir, '404.html'), notFoundHtml);
 
   // Generate sitemap.xml with all canonical pages
-  const sitemapEntries = mainPages.map((page) => {
+  const sitemapEntries = allPages.map((page) => {
     const loc = new URL(page.route, siteUrl).href;
-    const priority = page.route === '/' ? '1.0' : '0.8';
+    const priority = page.route === '/' ? '1.0' : page.route.startsWith('/guides/') ? '0.7' : '0.8';
     return `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>2026-10-06</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
   }).join('\n');
 
@@ -90,7 +135,7 @@ try {
     `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl.href}sitemap.xml\n`
   );
 
-  console.log(`[prerender] Rendered ${mainPages.length} static pages, 404.html, sitemap.xml & robots.txt.`);
+  console.log(`[prerender] Rendered ${allPages.length} static pages, 404.html, sitemap.xml & robots.txt.`);
 } finally {
   await vite.close();
 }

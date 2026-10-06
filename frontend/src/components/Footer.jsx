@@ -32,6 +32,9 @@ export default function Footer() {
           <Link to="/docs">
             API Reference
           </Link>
+          <Link to="/guides">
+            Technical Guides
+          </Link>
         </nav>
       </div>
     </footer>

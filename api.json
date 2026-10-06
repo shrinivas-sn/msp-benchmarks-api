@@ -24,6 +24,7 @@
   "routes": [
     { "path": "/", "base": "portal", "kind": "page" },
     { "path": "/docs", "base": "portal", "kind": "page" },
+    { "path": "/guides", "base": "portal", "kind": "page" },
     { "path": "/status", "base": "portal", "kind": "page" },
     { "path": "/v1/msp/current", "base": "api", "kind": "api" },
     { "path": "/v1/msp/crops", "base": "api", "kind": "api" },

@@ -32,6 +32,11 @@ export default function Navbar({ isOnline = true }) {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/guides" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                Guides
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/status" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
                 Status
               </NavLink>
