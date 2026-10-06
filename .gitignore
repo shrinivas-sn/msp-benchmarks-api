@@ -31,3 +31,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# SEO working directory (plan, briefs, authority)
+seo/
