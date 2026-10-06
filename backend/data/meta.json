@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "dataset_title": "Indian Minimum Support Prices (MSP) & Cost of Production Benchmarks",
+  "source_primary": "Commission for Agricultural Costs and Prices (CACP), Department of Agriculture and Farmers Welfare",
+  "source_primary_url": "https://cacp.da.gov.in/Home/msp",
+  "source_secondary": "Cabinet Committee on Economic Affairs (CCEA), Press Information Bureau (PIB)",
+  "source_secondary_url": "https://pib.gov.in",
+  "license": "Government Open Data License - India (GODL-India) & Department of Agriculture Terms of Use",
+  "last_snapshot_at": "2026-10-06T06:04:10Z",
+  "coverage_start_year": 2010,
+  "coverage_end_year": 2026,
+  "commodities_count": 28,
+  "total_records_count": 476,
+  "mandated_categories": [
+    "Cereals",
+    "Pulses",
+    "Oilseeds",
+    "Commercial Crops"
+  ]
+}
