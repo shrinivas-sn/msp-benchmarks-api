@@ -1,25 +1,31 @@
 {
   "archetype": "agri-statutory-benchmark",
   "palette": {
-    "id": "emerald-amber",
-    "name": "Emerald & Harvest Amber (Agricultural Statutory Registry)",
-    "mood": "authoritative, agricultural, trustworthy, high-contrast light mode",
+    "id": "institutional-forest-ochre",
+    "name": "Institutional Forest Slate & Harvest Ochre",
+    "mood": "authoritative, agricultural economic benchmark, trustworthy, high-contrast light mode",
     "tokens": {
-      "bg_canvas": "#f8fafc",
+      "bg_canvas": "#faf9f6",
       "bg_card": "#ffffff",
-      "primary": "#065f46",
-      "accent": "#d97706",
-      "accent_light": "#fef3c7",
-      "text_main": "#0f172a",
-      "text_muted": "#475569",
-      "border": "#e2e8f0",
-      "tag_kharif": "#ecfdf5",
-      "tag_rabi": "#fffbeb",
-      "tag_commercial": "#eff6ff"
+      "bg_card_subtle": "#f3f1ec",
+      "primary": "#182e22",
+      "primary_hover": "#102118",
+      "primary_light": "#edf2ef",
+      "primary_border": "#cbd6ce",
+      "accent": "#8e4b10",
+      "accent_hover": "#753d0c",
+      "accent_light": "#fbf5ee",
+      "accent_border": "#ebd9c5",
+      "text_main": "#141715",
+      "text_muted": "#4e5751",
+      "text_dim": "#79837d",
+      "border": "#dfdbd2",
+      "border_subtle": "#e9e6df",
+      "border_strong": "#bfbbb0"
     },
     "contrast_ratio": {
-      "text_to_card": 14.8,
-      "primary_to_bg": 9.2
+      "text_to_card": 16.2,
+      "primary_to_bg": 11.4
     }
   },
   "typography": {
@@ -29,15 +35,16 @@
     "font_features": "cv02, tabular-nums"
   },
   "css_variables": {
-    "--bg-canvas": "#f8fafc",
+    "--bg-canvas": "#faf9f6",
     "--bg-card": "#ffffff",
-    "--primary": "#065f46",
-    "--primary-hover": "#047857",
-    "--accent": "#d97706",
-    "--accent-light": "#fef3c7",
-    "--text-main": "#0f172a",
-    "--text-muted": "#475569",
-    "--border": "#e2e8f0",
+    "--bg-card-subtle": "#f3f1ec",
+    "--primary": "#182e22",
+    "--primary-hover": "#102118",
+    "--accent": "#8e4b10",
+    "--accent-light": "#fbf5ee",
+    "--text-main": "#141715",
+    "--text-muted": "#4e5751",
+    "--border": "#dfdbd2",
     "--font-heading": "Inter, sans-serif",
     "--font-body": "Inter, sans-serif",
     "--font-mono": "'JetBrains Mono', monospace"

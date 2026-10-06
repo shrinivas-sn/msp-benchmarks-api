@@ -367,8 +367,9 @@ export default function PlaygroundPage() {
 
             <pre
               style={{
-                background: '#090d16',
-                color: '#93c5fd',
+                background: '#151816',
+                color: '#e2e6e3',
+                border: '1px solid #282f2a',
                 padding: '0.75rem',
                 borderRadius: '8px',
                 fontSize: '0.75rem',

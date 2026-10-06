@@ -365,14 +365,14 @@ export default function DocsPage() {
                 </div>
                 <pre
                   style={{
-                    background: '#090d16',
-                    color: '#e2e8f0',
+                    background: '#151816',
+                    color: '#e2e6e3',
                     padding: '1rem',
                     borderRadius: '8px',
                     fontSize: '0.8125rem',
                     fontFamily: 'var(--font-mono)',
                     overflowX: 'auto',
-                    border: '1px solid #1e293b',
+                    border: '1px solid #282f2a',
                     maxHeight: '340px'
                   }}
                 >

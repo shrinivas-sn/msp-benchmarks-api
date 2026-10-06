@@ -70,23 +70,16 @@ export default function HomePage() {
     <div className="animate-enter">
       {/* Editorial Hero */}
       <section className="hero">
-        <div className="badge-row">
-          <span className="pill-badge">
-            <IconShieldCheck size={14} />
-            <span>Official CACP & CCEA Gazette</span>
-          </span>
-          <span className="pill-badge">
-            <IconBolt size={14} />
-            <span>Keyless / Global Edge CORS</span>
-          </span>
-          <span className="pill-badge">
-            <IconWheat size={14} />
-            <span>28 Mandated Commodities (2010–2026/27)</span>
-          </span>
+        <div className="hero-kicker">
+          <span>Official Gazette Data</span>
+          <span className="kicker-sep">•</span>
+          <span>Ministry of Agriculture &amp; Farmers Welfare</span>
+          <span className="kicker-sep">•</span>
+          <span>Keyless Edge API</span>
         </div>
 
         <h1>
-          Indian Minimum Support Price <span>(MSP)</span> Benchmark API
+          Indian Minimum Support Price (MSP) Benchmark API
         </h1>
         <p>
           A high-availability, zero-auth public REST service providing statutory agricultural floor prices,

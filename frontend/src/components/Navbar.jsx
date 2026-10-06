@@ -9,9 +9,7 @@ export default function Navbar({ isOnline = true }) {
     <header className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand">
-          <div className="navbar-brand-badge" aria-hidden="true">
-            <IconWheat size={18} />
-          </div>
+          <IconWheat size={19} className="navbar-brand-icon" />
           <span>India MSP Benchmarks</span>
         </Link>
 
