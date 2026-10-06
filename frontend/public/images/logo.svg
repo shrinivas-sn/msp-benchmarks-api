@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#064e3b" />
+  <!-- Benchmark Base -->
+  <path d="M10 38H38V40H10V38Z" fill="#d97706" />
+  <path d="M12 34H36V36H12V34Z" fill="#f59e0b" />
+  <!-- Central Wheat Stem -->
+  <path d="M24 10V34" stroke="#fef3c7" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Grains Left -->
+  <path d="M24 14C20 12 16 15 17 19C20 20 23 18 24 16" fill="#f59e0b" />
+  <path d="M24 20C19 18 15 21 16 25C19 26 23 24 24 22" fill="#d97706" />
+  <path d="M24 26C19 24 15 27 16 31C19 32 23 30 24 28" fill="#f59e0b" />
+  <!-- Grains Right -->
+  <path d="M24 14C28 12 32 15 31 19C28 20 25 18 24 16" fill="#f59e0b" />
+  <path d="M24 20C29 18 33 21 32 25C29 26 25 24 24 22" fill="#d97706" />
+  <path d="M24 26C29 24 33 27 32 31C29 32 25 30 24 28" fill="#f59e0b" />
+  <!-- Top Grain Ear -->
+  <ellipse cx="24" cy="10" rx="2.5" ry="3.5" fill="#fef3c7" />
+</svg>
