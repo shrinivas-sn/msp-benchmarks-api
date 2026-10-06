@@ -1,0 +1,51 @@
+{
+  "manifest_version": 1,
+  "slug": "msp-benchmarks",
+  "name": "Indian Minimum Support Price (MSP) & Crop Benchmark API",
+  "one_liner": "Free, keyless REST API for Indian agricultural Minimum Support Prices (MSP) and CACP cost of production benchmarks (2010–2026/27).",
+  "category": "Agriculture",
+  "repo": "https://github.com/shrinivas-sn/msp-benchmarks-api",
+  "source": {
+    "name": "Commission for Agricultural Costs & Prices (CACP) and Cabinet Committee on Economic Affairs (CCEA)",
+    "url": "https://cacp.da.gov.in",
+    "license": "Government Open Data License - India (GODL-India) and Department of Agriculture terms"
+  },
+  "not_provided": [
+    "historical C2 costs before 2026",
+    "real-time daily mandi arrivals"
+  ],
+  "stack": null,
+  "deploy": {
+    "portal_url": "https://msp-benchmarks-api.vercel.app",
+    "api_base_url": "https://msp-benchmarks-api.vercel.app",
+    "health_path": "/health",
+    "warmup_path": "/health"
+  },
+  "routes": [
+    { "path": "/", "base": "portal", "kind": "page" },
+    { "path": "/docs", "base": "portal", "kind": "page" },
+    { "path": "/status", "base": "portal", "kind": "page" },
+    { "path": "/v1/msp/current", "base": "api", "kind": "api" },
+    { "path": "/v1/msp/crops", "base": "api", "kind": "api" },
+    { "path": "/v1/msp/crops/wheat", "base": "api", "kind": "api" },
+    { "path": "/v1/msp/seasons/rabi", "base": "api", "kind": "api" },
+    { "path": "/v1/msp/compare?crop=wheat&year=2026", "base": "api", "kind": "api" },
+    { "path": "/v1/freshness", "base": "api", "kind": "api" },
+    { "path": "/health", "base": "api", "kind": "api" }
+  ],
+  "submission": {
+    "terms": [
+      "MSP",
+      "Minimum Support Price",
+      "agriculture India",
+      "crop benchmarks",
+      "CACP"
+    ],
+    "targets": [
+      {
+        "repo": "public-apis/public-apis",
+        "pr": null
+      }
+    ]
+  }
+}
