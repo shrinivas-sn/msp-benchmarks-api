@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { IconWheat } from './Icons';
 
 export default function Navbar({ isOnline = true }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand">
-          <img src="/images/logo.svg" alt="India MSP Logo" />
+          <div className="navbar-brand-badge" aria-hidden="true">
+            <IconWheat size={18} />
+          </div>
           <span>India MSP Benchmarks</span>
         </Link>
 
-        <nav>
+        {/* Desktop Navigation */}
+        <nav aria-label="Main Navigation">
           <ul className="navbar-nav">
             <li>
               <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} end>
@@ -33,8 +39,8 @@ export default function Navbar({ isOnline = true }) {
               </NavLink>
             </li>
             <li>
-              <div className="status-badge" title={isOnline ? "API is operational" : "Checking API..."}>
-                <span className="dot"></span>
+              <div className="status-badge" title={isOnline ? "Vercel Edge API is fully operational" : "Checking API health..."}>
+                <span className="dot" aria-hidden="true"></span>
                 <span>{isOnline ? "API Online" : "Checking"}</span>
               </div>
             </li>
